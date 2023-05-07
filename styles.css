@@ -7,6 +7,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     transition: all 0.4s ease;;
+    text-decoration: none;
 }
 
 
@@ -22,6 +23,7 @@
 
 body{
     height: 100vh;
+    width: 100vw;
     background-color: var(--body-color);
 }
 
@@ -238,6 +240,40 @@ body.dark .search-field input{
 body.dark .search-field i{
     color: var(--text-color);
 }
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-color: #bbc5df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.left-text, .right-slider{
+    width: 40%;
+}
+
+.left-text .welcome{
+    font-size: 3rem;
+}
+
+.left-text p{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.left-text button{
+    margin-top: 50px;
+    font-size: 16px;
+    padding: 10px;
+}
+.right-img img{
+    height: 500px;
+    margin-top: 10px;
+}
+
+
 
 @media (max-width: 790px) {
     nav .nav-bar .sidebarOpen{
