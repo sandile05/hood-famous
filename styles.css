@@ -1,11 +1,12 @@
 /* ===== Google Font Import - Poppins ===== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Merienda', cursive;
   transition: all 0.4s ease;
   text-decoration: none;
 }
@@ -26,6 +27,7 @@ body {
 }
 body {
   background-color: var(--body-color);
+
 }
 
 body.dark {
@@ -61,6 +63,7 @@ nav .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 nav .nav-bar .sidebarOpen {
@@ -241,26 +244,19 @@ body.dark .search-field i {
   color: var(--text-color);
 }
 
-/* .hero{
-    height: 100vh;
-    width: 100%;
-    background-color: #bbc5df;
-} */
 .home {
   height: 90vh;
   width: 100%;
-  /* background: red; */
-  /* overflow-x: hidden; */
 }
 h1 {
   margin-top: 150px;
   text-align: center;
   font-size: 36px;
+  font-weight: 700;
 }
 .slider-container {
   width: 85%;
   height: 600px;
-  /* background-color: #1f9e50; */
   margin: 80px auto 0;
 }
 
@@ -272,7 +268,6 @@ h1 {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  /* background: #fff; */
   display: flex;
   justify-content: center;
   align-items: center;
