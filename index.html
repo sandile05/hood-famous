@@ -1,74 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- ===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 
     <title>HOOD FAMOUS*</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div class="nav-bar">
-            <i class='bx bx-menu sidebarOpen' ></i>
-            <span class="logo navLogo"><a href="#">HOOD FAMOUS</a></span>
+      <div class="nav-bar">
+        <i class="bx bx-menu sidebarOpen"></i>
+        <span class="logo navLogo"><a href="#">HFmag</a></span>
 
-            <div class="menu">
-                <div class="logo-toggle">
-                    <span class="logo"><a href="#">HOOD FAMOUS</a></span>
-                    <i class='bx bx-x siderbarClose'></i>
-                </div>
+        <div class="menu">
+          <div class="logo-toggle">
+            <span class="logo"><a href="#">HOOD FAMOUS</a></span>
+            <i class="bx bx-x siderbarClose"></i>
+          </div>
 
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Artists</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Events</a></li>
-                </ul>
-            </div>
-
-            <div class="darkLight-searchBox">
-                <div class="dark-light">
-                    <i class='bx bx-moon moon'></i>
-                    <i class='bx bx-sun sun'></i>
-                </div>
-
-                <div class="searchBox">
-                   <div class="searchToggle">
-                    <i class='bx bx-x cancel'></i>
-                    <i class='bx bx-search search'></i>
-                   </div>
-
-                    <div class="search-field">
-                        <input type="text" placeholder="Search...">
-                        <i class='bx bx-search'></i>
-                    </div>
-                </div>
-            </div>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Artists</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
         </div>
+
+        <div class="darkLight-searchBox">
+          <div class="dark-light">
+            <i class="bx bx-moon moon"></i>
+            <i class="bx bx-sun sun"></i>
+          </div>
+
+          <div class="searchBox">
+            <div class="searchToggle">
+              <i class="bx bx-x cancel"></i>
+              <i class="bx bx-search search"></i>
+            </div>
+
+            <div class="search-field">
+              <input type="text" placeholder="Search..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
-    <section class="hero">
-        <div class="left-text">
-            <h1 class="welcome">Welcome To <br> <span>Hood Famous*</span></h1>
-            <p class="intro-text">With the focus being on the rich culture and talent in the hood, the vision is to create a collective for undiscovered talent and young artists. This platform is for artists to showcase their uniqueness and expression through their craft.
-                <br>
-            The movement is centered around a wild and authentic approach to content creation, giving you a unique experience of the art and artists as you find out more about HOOD FAMOUS*. </p>
-            <button><a href="#">Explore talent</a></button>
+    <section class="home">
+        <div> <h1>Welcome To <span>HOOD FAMOUS*</span></h1></div>
+      <div class="slider-container">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <span class="category">MUSIC</span>
+              <a href="#"
+                ><img
+                  src="https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt=""
+              /></a>
+            </div>
+            <div class="swiper-slide">
+              <span class="category">ART</span>
+              <a href="#"
+                ><img
+                  src="https://images.pexels.com/photos/1152188/pexels-photo-1152188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt=""
+              /></a>
+            </div>
+            <div class="swiper-slide">
+                <span class="category">CONTENT CREATION</span>
+              <a href="#"
+                ><img
+                  src="https://images.pexels.com/photos/1870438/pexels-photo-1870438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt=""
+              /></a>
+            </div>
+            <div class="swiper-slide">
+                <span class="category">FASHION & DESIGN</span>
+              <a href="#"
+                ><img
+                  src="https://images.pexels.com/photos/4620611/pexels-photo-4620611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="right-img">
-            <img src="https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-        </div>
+      </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
-
-</body>
+  </body>
 </html>
