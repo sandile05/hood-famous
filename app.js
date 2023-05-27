@@ -45,12 +45,12 @@ body.addEventListener("click", (e) => {
 });
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
   spaceBetween: 30,
-  loop: true,
-  autoplay: true,
-  autoplayTimeOut: 2000,
-  autoplayHoverPause: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

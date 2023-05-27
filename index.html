@@ -14,111 +14,85 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 
     <title>HOOD FAMOUS*</title>
   </head>
   <body>
-    <nav>
-      <div class="nav-bar">
-        <i class="bx bx-menu sidebarOpen"></i>
-        <span class="logo navLogo"><a href="#">HFmag</a></span>
+    <!-- header  -->
+    <header>
+      <nav>
+        <div class="nav-bar">
+          <i class="bx bx-menu sidebarOpen"></i>
+          <span class="logo navLogo"><a href="#">HFmag</a></span>
 
-        <div class="menu">
-          <div class="logo-toggle">
-            <span class="logo"><a href="#">HOOD FAMOUS</a></span>
-            <i class="bx bx-x siderbarClose"></i>
+          <div class="menu">
+            <div class="logo-toggle">
+              <span class="logo"><a href="#">HOOD FAMOUS</a></span>
+              <i class="bx bx-x siderbarClose"></i>
+            </div>
+
+            <ul class="nav-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Artists</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
           </div>
 
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Artists</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-        </div>
-
-        <div class="darkLight-searchBox">
-          <div class="dark-light">
-            <i class="bx bx-moon moon"></i>
-            <i class="bx bx-sun sun"></i>
-          </div>
-
-          <div class="searchBox">
-            <div class="searchToggle">
-              <i class="bx bx-x cancel"></i>
-              <i class="bx bx-search search"></i>
+          <div class="darkLight-searchBox">
+            <div class="dark-light">
+              <i class="bx bx-moon moon"></i>
+              <i class="bx bx-sun sun"></i>
             </div>
 
-            <div class="search-field">
-              <input type="text" placeholder="Search..." />
-              <i class="bx bx-search"></i>
+            <div class="searchBox">
+              <div class="searchToggle">
+                <i class="bx bx-x cancel"></i>
+                <i class="bx bx-search search"></i>
+              </div>
+
+              <div class="search-field">
+                <input type="text" placeholder="Search..." />
+                <i class="bx bx-search"></i>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
-    <section class="home">
-      <div><h1>Welcome To HOOD FAMOUS*</h1></div>
-      <div class="slider-container">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <span class="category">MUSIC</span>
-              <a href="#"
-                ><img
-                  src="https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt=""
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <span class="category">ART</span>
-              <a href="#"
-                ><img
-                  src="https://images.pexels.com/photos/1152188/pexels-photo-1152188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt=""
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <span class="category">CONTENT CREATION</span>
-              <a href="#"
-                ><img
-                  src="https://images.pexels.com/photos/1870438/pexels-photo-1870438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt=""
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <span class="category">FASHION & DESIGN</span>
-              <a href="#"
-                ><img
-                  src="https://images.pexels.com/photos/4620611/pexels-photo-4620611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt=""
-              /></a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- home section  -->
+      <section class="home" id="home">
+        <div class="wrapper">
+          <div class="left">
+            <h1>Welcome to hood famous</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eligendi eius inventore ipsum, fuga doloremque asperiores voluptas! Fugiat saepe aspernatur rerum commodi. Quo, maxime officia?</p>
+          </div>
+          <div class="right">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">ART & DESIGN</div>
+                <div class="swiper-slide">CONTENT CREATION</div>
+                <div class="swiper-slide">MUSIC</div>
+                <div class="swiper-slide">PERFORMANCE ARTS</div>
+                <div class="swiper-slide">Slide 5</div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
         </div>
-      </div>
-    </section>
-    <section class="artists">
-      <h2 id="featured-artist">Featured Artists</h2>
-      <div class="artist-container">
-        <div class="left">
-          <div class="main-artist">
+      </section>
 
-          </div>
-        </div>
-        <div class="right">
+      <!-- featured  -->
+      <section class="featured" id="featured"></section>
+    </main>
 
-        </div>
-      </div>
-    </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
   </body>
