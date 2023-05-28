@@ -1,12 +1,12 @@
 /* ===== Google Font Import - Poppins ===== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Merienda', cursive;
+  font-family: "Merienda", cursive;
   transition: all 0.4s ease;
   text-decoration: none;
 }
@@ -28,7 +28,6 @@ body {
 }
 body {
   background-color: var(--body-color);
-
 }
 
 body.dark {
@@ -64,7 +63,6 @@ nav .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 nav .nav-bar .sidebarOpen {
@@ -245,20 +243,20 @@ body.dark .search-field i {
   color: var(--text-color);
 }
 
-main{
+main {
   width: 90%;
   height: 100%;
   margin: 0 auto;
   /* background-color: #393838; */
 }
 
-.home{
+.home {
   /* height: 95vh; */
   width: 100%;
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   margin-top: 80px;
 }
-.wrapper{
+.wrapper {
   width: 100%;
   height: 80%;
   /* background-color: rgb(44, 39, 33); */
@@ -269,41 +267,40 @@ main{
   flex-wrap: wrap;
 }
 
-.left, .right{
+.left,
+.right {
   width: 48%;
   height: 500px;
   margin-top: 30px;
   /* background-color: #4070f4; */
 }
-.left-container{
-
+.left-container {
 }
 
-h1{
+h1 {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.left p{
+.left p {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.socials{
+.socials {
   width: 100%;
   display: flex;
   justify-content: center;
   font-size: 30px;
   gap: 10px;
-
 }
 
-.socials a{
+.socials a {
   color: black;
 }
 
-.scroll-down{
+.scroll-down {
   width: 100%;
   text-align: center;
   font-size: 40px;
@@ -384,7 +381,56 @@ h1{
     display: block;
     margin-top: 20px;
   }
+
+  .left,
+  .right {
+    width: 45%;
+    height: 530px;
+    margin-top: 30px;
+    /* background-color: #4070f4; */
+  }
+
+  .swiper {
+    width: 100%;
+    height: 85%;
+    margin-top: 15px;
+  }
+  .left h1{
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+  .left p{
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 667px){
+  .left h1{
+    font-size: 1.8rem;
+  }
+  .left,
+  .right {
+    width: 100%;
+    height: 500px;
+    margin-top: 10px;
+    /* background-color: #4070f4; */
+  }
+
+}
+
+@media (max-width: 600px){
   .wrapper{
     flex-direction: column;
   }
+  .left, .right{
+    height: 400px;
+  }
+}
+
+@media (max-width: 425px){
+  .left h1{
+    font-size: 1.5rem;
+  }
+
 }
