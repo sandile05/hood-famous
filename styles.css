@@ -250,13 +250,13 @@ main {
   /* background-color: #393838; */
 }
 
-.home {
+.home, .featured {
   /* height: 95vh; */
   width: 100%;
   /* background-color: #f2f2f2; */
   margin-top: 80px;
 }
-.wrapper {
+.wrapper, .featured-wrapper {
   width: 100%;
   height: 80%;
   /* background-color: rgb(44, 39, 33); */
@@ -274,10 +274,9 @@ main {
   margin-top: 30px;
   /* background-color: #4070f4; */
 }
-.left-container {
-}
 
-h1 {
+
+h1, h2 {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -331,6 +330,26 @@ h1 {
 .swiper {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* featured artists  */
+.main-artists{
+  width: 60%;
+  height: 500px;
+  background-color: aquamarine;
+}
+aside{
+  width: 35%;
+  height: 500px;
+  background-color: blue;
+}
+
+.featured-wrapper{
+  margin-bottom: 200px;
+}
+.featured-container-left{
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 790px) {
