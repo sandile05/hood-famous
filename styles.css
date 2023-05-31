@@ -339,13 +339,9 @@ h1, h2 {
 .main-artists{
   width: 70%;
   height: 500px;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
-aside{
-  width: 25%;
-  height: 500px;
-  background-color: blue;
-}
+
 
 .featured-wrapper{
   margin-bottom: 200px;
@@ -359,6 +355,9 @@ button{
   margin-top: 15px;
   font-size: 1rem;
 }
+
+/* blog styling */
+
 
 @media (max-width: 790px) {
   nav .nav-bar .sidebarOpen {
@@ -423,7 +422,7 @@ button{
     height: 85%;
     margin-top: 15px;
   }
-  .left h1{
+  h1, h2{
     margin-bottom: 0.5rem;
     font-size: 2rem;
   }
@@ -434,7 +433,7 @@ button{
 }
 
 @media (max-width: 667px){
-  .left h1{
+  h1, h2{
     font-size: 1.8rem;
   }
   .left,
@@ -457,7 +456,7 @@ button{
 }
 
 @media (max-width: 425px){
-  .left h1{
+   h1, h2{
     font-size: 1.5rem;
   }
 
