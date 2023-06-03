@@ -350,6 +350,7 @@ h1, h2 {
 /* featured artists  */
 .featured{
   margin-top: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 .main-artists{
   width: 100%;
@@ -458,6 +459,10 @@ button{
 }
 
 /* about us  */
+.about{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 50px;
+}
 .about-container{
   width: 100%;
   /* height: auto; */
@@ -484,13 +489,15 @@ button{
 
 .about .heading{
   text-align: center;
+  margin-top: 20px;
 }
 
 /* contact us styling  */
 .contact{
   width: 100%;
-  background-color: #242526;
+  /* background-color: #242526; */
   margin-top: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 .contact-container{
   width: 100%;
@@ -555,6 +562,9 @@ textarea:valid~label{
 }
 .row .input-group{
   flex-basis: 48%;
+}
+.contact .heading{
+  margin-top: 30px;
 }
 @media (max-width: 986px ){
   .about-container .right-side{
