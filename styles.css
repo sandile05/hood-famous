@@ -496,13 +496,13 @@ button{
 .contact{
   width: 100%;
   /* background-color: #242526; */
-  margin-top: 20px;
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 .contact-container{
   width: 100%;
-  height: 100vh;
-  background-color: red;
+  height: 85vh;
+  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -570,7 +570,7 @@ textarea:valid~label{
 footer{
   background: #111;
   padding: 15px 23px;
-  color: var(--secondary-color);
+  color: #fff;
   text-align: center;
 }
 footer span a{
