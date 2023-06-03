@@ -1,3 +1,18 @@
+document.addEventListener('DOMContentLoaded', function() {
+  var infoButtons = document.getElementsByClassName('info-button');
+
+  for (var i = 0; i < infoButtons.length; i++) {
+    infoButtons[i].addEventListener('click', function() {
+      var popup = this.parentNode.getElementsByClassName('popup')[0];
+      if (popup.style.display === 'block') {
+        popup.style.display = 'none';
+      } else {
+        popup.style.display = 'block';
+      }
+    });
+  }
+});
+
 const body = document.querySelector("body"),
   nav = document.querySelector("nav"),
   modeToggle = document.querySelector(".dark-light"),
