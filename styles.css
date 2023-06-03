@@ -471,6 +471,9 @@ button{
   justify-content: center;
   gap: 20px;
 }
+.about-container .socials{
+  margin-top: 20px;
+}
 .about-container .left-img{
   width: 100%;
   height: 100%;
