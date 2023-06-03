@@ -566,6 +566,20 @@ textarea:valid~label{
 .contact .heading{
   margin-top: 30px;
 }
+/* footer section styling */
+footer{
+  background: #111;
+  padding: 15px 23px;
+  color: var(--secondary-color);
+  text-align: center;
+}
+footer span a{
+  color: var(--main-color);
+  text-decoration: none;
+}
+footer span a:hover{
+  text-decoration: underline;
+}
 @media (max-width: 986px ){
   .about-container .right-side{
     width: 100%;
