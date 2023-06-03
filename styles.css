@@ -529,6 +529,7 @@ label{
   padding: 10px;
   color: #fff;
   cursor: text;
+  transition: 0.2s;
 }
 .contact button{
   padding: 10px 0;
@@ -540,6 +541,21 @@ label{
   cursor: pointer;
 }
 
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+  top: -35px;
+  font-size: 14px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row .input-group{
+  flex-basis: 48%;
+}
 @media (max-width: 986px ){
   .about-container .right-side{
     width: 100%;
