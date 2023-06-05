@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var infoButtons = document.getElementsByClassName('info-button');
+  let infoButtons = document.getElementsByClassName('info-button');
 
-  for (var i = 0; i < infoButtons.length; i++) {
+  for (let i = 0; i < infoButtons.length; i++) {
     infoButtons[i].addEventListener('click', function() {
-      var popup = this.parentNode.getElementsByClassName('popup')[0];
+      let popup = this.parentNode.getElementsByClassName('popup')[0];
       if (popup.style.display === 'block') {
         popup.style.display = 'none';
       } else {
@@ -13,53 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-const body = document.querySelector("body"),
-  nav = document.querySelector("nav"),
-  modeToggle = document.querySelector(".dark-light"),
-  searchToggle = document.querySelector(".searchToggle"),
-  sidebarOpen = document.querySelector(".sidebarOpen"),
-  siderbarClose = document.querySelector(".siderbarClose");
-
-let getMode = localStorage.getItem("mode");
-if (getMode && getMode === "dark-mode") {
-  body.classList.add("dark");
-}
-
-// js code to toggle dark and light mode
-modeToggle.addEventListener("click", () => {
-  modeToggle.classList.toggle("active");
-  body.classList.toggle("dark");
-
-  // js code to keep user selected mode even page refresh or file reopen
-  if (!body.classList.contains("dark")) {
-    localStorage.setItem("mode", "light-mode");
-  } else {
-    localStorage.setItem("mode", "dark-mode");
-  }
-});
-
-// js code to toggle search box
-searchToggle.addEventListener("click", () => {
-  searchToggle.classList.toggle("active");
-});
-
 //   js code to toggle sidebar
-sidebarOpen.addEventListener("click", () => {
-  nav.classList.add("active");
-});
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-body.addEventListener("click", (e) => {
-  let clickedElm = e.target;
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+})
 
-  if (
-    !clickedElm.classList.contains("sidebarOpen") &&
-    !clickedElm.classList.contains("menu")
-  ) {
-    nav.classList.remove("active");
-  }
-});
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener('click', () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}))
 
-var swiper = new Swiper(".mySwiper", {
+
+let swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
