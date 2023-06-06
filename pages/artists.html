@@ -10,47 +10,107 @@
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../styles.css">
 
 </head>
 <body>
     <header>
-        <nav>
-          <div class="nav-bar">
-            <i class="bx bx-menu sidebarOpen"></i>
-            <span class="logo navLogo"><a href="#">HFmag</a></span>
+      <nav class="navbar">
+        <a href="#" class="nav-branding">HFmag.</a>
 
-            <div class="menu">
-              <div class="logo-toggle">
-                <span class="logo"><a href="../index.html">HOOD FAMOUS</a></span>
-                <i class="bx bx-x siderbarClose"></i>
-              </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home Page</a>
+          </li>
+        </ul>
 
-              <ul class="nav-links">
-                <li><a href="#about">Home</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
       </header>
+
       <main>
         <section class="artist-page">
-            <div class="profile-card">
-                <img src="../images/artist-images/lady.jpeg" alt="Profile Picture">
-                <h3>John Doe</h3>
-                <p>Software Engineer</p>
-                <button class="info-button">More Info</button>
-                <div class="popup">
-                  <div class="popup-image">
-                    <img src="../images/background.jpeg" alt="Profile Picture">
-                  </div>
-                  <div class="popup-content">
-                    <h3>John Doe</h3>
-                    <p>Age: 30</p>
-                    <p>Location: New York</p>
-                    <p>Interests: Programming, Music</p>
-                  </div>
+          <div class="categories">
+            <div class="category" onclick="showProfileCards('all')">All</div>
+            <div class="category" onclick="showProfileCards('art')">Art</div>
+            <div class="category" onclick="showProfileCards('music')">Music</div>
+            <div class="category" onclick="showProfileCards('content')">Content</div>
+            <div class="category" onclick="showProfileCards('performance')">Performance</div>
+          </div>
+
+          <div class="cards" id="profileCards">
+            <div class="profile-card art">
+              <h2>Profile Card 1</h2>
+              <p>Art</p>
+              <!-- Add more content here -->
+              <button class="info-button">More Info</button>
+              <div class="popup">
+                <div class="popup-image">
+                  <img src="../images/hf-logo.png" alt="Profile Picture">
                 </div>
+                <div class="popup-content">
+                  <h3>John Doe</h3>
+                  <p>Age: 30</p>
+                  <p>Location: New York</p>
+                  <p>Interests: Programming, Music</p>
+                </div>
+                <button class="close-button">close</button>
               </div>
+            </div>
+
+            <div class="profile-card music">
+              <h2>Profile Card 2</h2>
+              <p>Music</p>
+              <!-- Add more content here -->
+            </div>
+
+            <div class="profile-card content">
+              <h2>Profile Card 3</h2>
+              <p>Content</p>
+              <!-- Add more content here -->
+            </div>
+
+            <div class="profile-card art">
+              <h2>Profile Card 4</h2>
+              <p>Art</p>
+              <!-- Add more content here -->
+            </div>
+
+            <div class="profile-card content">
+              <h2>Profile Card 4.5</h2>
+              <p>Art</p>
+              <!-- Add more content here -->
+              <button class="info-button">More Info</button>
+              <div class="popup">
+                <div class="popup-image">
+                  <img src="../images/hf-logo.png" alt="Profile Picture">
+                </div>
+                <div class="popup-content">
+                  <h3>Joseph</h3>
+                  <p>Age: 30</p>
+                  <p>Location: New York</p>
+                  <p>Interests: Programming, Music</p>
+                </div>
+                <button class="close-button">close</button>
+              </div>
+            </div>
+
+            <div class="profile-card music">
+              <h2>Profile Card 5</h2>
+              <p>Music</p>
+              <!-- Add more content here -->
+            </div>
+
+            <div class="profile-card performance">
+              <h2>Profile Card 6</h2>
+              <p>Performance</p>
+              <!-- Add more content here -->
+            </div>
+          </div>
         </section>
       </main>
 

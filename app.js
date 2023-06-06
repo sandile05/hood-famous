@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   let infoButtons = document.getElementsByClassName('info-button');
+  let popups = document.getElementsByClassName('popup');
 
   for (let i = 0; i < infoButtons.length; i++) {
     infoButtons[i].addEventListener('click', function() {
@@ -7,10 +8,32 @@ document.addEventListener('DOMContentLoaded', function() {
       if (popup.style.display === 'block') {
         popup.style.display = 'none';
       } else {
+        // Close all open popups
+        for (let j = 0; j < popups.length; j++) {
+          popups[j].style.display = 'none';
+        }
         popup.style.display = 'block';
       }
     });
   }
+
+  // Close popup when clicking on the close button
+  let closeButtons = document.getElementsByClassName('close-button');
+  [...closeButtons].forEach(function(button) {
+    button.addEventListener('click', function() {
+      let popup = this.closest('.popup');
+      popup.style.display = 'none';
+    });
+  });
+
+  // Close popup when clicking outside of it
+  window.addEventListener('click', function(event) {
+    if (!event.target.closest('.popup') && !event.target.matches('.info-button')) {
+      for (let i = 0; i < popups.length; i++) {
+        popups[i].style.display = 'none';
+      }
+    }
+  });
 });
 
 //   js code to toggle sidebar
@@ -45,4 +68,25 @@ let swiper = new Swiper(".mySwiper", {
   },
 });
 
+function showProfileCards(category) {
+  // Hide all profile cards
+  var profileCards = document.getElementsByClassName("profile-card");
+  for (var i = 0; i < profileCards.length; i++) {
+    profileCards[i].style.display = "none";
+  }
+
+  // Show the selected category's profile cards
+  if (category === "all") {
+    // Show all cards
+    for (var i = 0; i < profileCards.length; i++) {
+      profileCards[i].style.display = "block";
+    }
+  } else {
+    // Show cards of the selected category
+    var selectedCategoryCards = document.getElementsByClassName(category);
+    for (var i = 0; i < selectedCategoryCards.length; i++) {
+      selectedCategoryCards[i].style.display = "block";
+    }
+  }
+}
 
