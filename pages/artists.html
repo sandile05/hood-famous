@@ -15,33 +15,27 @@
 </head>
 <body>
     <header>
-      <nav class="navbar">
-        <a href="#" class="nav-branding">HFmag.</a>
+      <nav class="navbar2">
+        <a href="../index.html" class="nav-branding"><i class='bx bx-home'></i></a>
 
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="../index.html" class="nav-link">Home Page</a>
+        <ul class="nav-menu2">
+          <li class="nav-item" onclick="showProfileCards('all')">
+            All
           </li>
-        </ul>
-
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
+          <li class="nav-item" onclick="showProfileCards('art')">
+            Art
+          </li>
+          <li class="nav-item"  onclick="showProfileCards('music')">
+          Music</li>
+          <li class="nav-item" onclick="showProfileCards('content')">
+          Content</li>
+          <li class="nav-item" onclick="showProfileCards('performance')">
+          Perfomance</li>
+          </ul>
       </header>
 
       <main>
         <section class="artist-page">
-          <div class="categories">
-            <div class="category" onclick="showProfileCards('all')">All</div>
-            <div class="category" onclick="showProfileCards('art')">Art</div>
-            <div class="category" onclick="showProfileCards('music')">Music</div>
-            <div class="category" onclick="showProfileCards('content')">Content</div>
-            <div class="category" onclick="showProfileCards('performance')">Performance</div>
-          </div>
-
           <div class="cards" id="profileCards">
             <div class="profile-card art">
               <h2>Profile Card 1</h2>
@@ -82,7 +76,7 @@
 
             <div class="profile-card content">
               <h2>Profile Card 4.5</h2>
-              <p>Art</p>
+              <p>content creation</p>
               <!-- Add more content here -->
               <button class="info-button">More Info</button>
               <div class="popup">
@@ -90,10 +84,22 @@
                   <img src="../images/hf-logo.png" alt="Profile Picture">
                 </div>
                 <div class="popup-content">
-                  <h3>Joseph</h3>
+                  <div class="left-content">
+                    <h3>Joseph</h3>
                   <p>Age: 30</p>
-                  <p>Location: New York</p>
-                  <p>Interests: Programming, Music</p>
+                  <p>Location: Johannesburg</p>
+                  <p>Phone No.: 011 234 5678</p>
+                  <p>Email: enail@example.com</p>
+                  <div class="socilas">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+                  </div>
+                  </div>
+                  <div class="right-content">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium voluptatibus sapiente vel dolorum, nihil quod! Nemo dignissimos non dolor quis vitae libero, aliquid voluptates, ex autem, veniam sint vel beatae?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, labore debitis consectetur a et voluptate </p>
+                  </div>
                 </div>
                 <button class="close-button">close</button>
               </div>
