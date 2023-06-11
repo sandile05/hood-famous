@@ -69,8 +69,11 @@ let swiper = new Swiper(".mySwiper", {
 });
 
 function showProfileCards(category) {
+
+  var profileCards = document.getElementsByClassName("card");
+  var categoryLabel = document.getElementById("categoryLabel");
   // Hide all profile cards
-  var profileCards = document.getElementsByClassName("profile-card");
+
   for (var i = 0; i < profileCards.length; i++) {
     profileCards[i].style.display = "none";
   }
@@ -80,13 +83,14 @@ function showProfileCards(category) {
     // Show all cards
     for (var i = 0; i < profileCards.length; i++) {
       profileCards[i].style.display = "block";
-    }
+    }categoryLabel.textContent = "All";
   } else {
     // Show cards of the selected category
     var selectedCategoryCards = document.getElementsByClassName(category);
     for (var i = 0; i < selectedCategoryCards.length; i++) {
       selectedCategoryCards[i].style.display = "block";
     }
+    categoryLabel.textContent = category;
   }
 }
 
