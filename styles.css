@@ -429,8 +429,8 @@ form {
   position: relative;
 }
 
-input,
-textarea {
+.contact input,
+.contact textarea {
   width: 100%;
   padding: 10px;
   outline: 0;
@@ -502,14 +502,23 @@ footer span a:hover {
 }
 
 .selected-category{
-
-  height: 45px;
-  background-color: #2b2b2b;
-  padding: 10px 15px;
+  width: 95%;
+  /* height: 45px; */
+  /* background-color: #2b2b2b; */
+  /* padding: 10px 30px; */
   position: fixed;
-  top: 70px;
-  right: 10px;;
-  z-index: 1
+  top: 85px;
+  right: 10px;
+  z-index: 1;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
+
+.selected-category #categoryLabel{
+  padding: 5px;
+  background: #fff;
+  position: relative
 }
 
 /* card styles  */
@@ -640,6 +649,38 @@ footer span a:hover {
 .card .popup .popup-content .right-content {
   flex: 1;
 }
+
+/* search bar  */
+
+.box{
+  height: 30px;
+  display: flex;
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 30px;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.box:hover input{
+  width: 180px;
+}
+
+.box input{
+  width: 0;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  transition: 0.3s;
+  background: transparent;
+}
+
+.box a .bx{
+  color: #1daf;
+  font-size: 18px;
+}
+
 
 /* media queries  */
 
@@ -947,6 +988,10 @@ footer span a:hover {
   }
   .artist-page .card .imgBx{
     width: 225px;
+  }
+
+  .nav-menu2 li{
+    font-size: 0.85em;
   }
 }
 
