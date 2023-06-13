@@ -885,10 +885,7 @@ footer span a:hover {
   .wrapper {
     flex-direction: column;
   }
-  .left,
-  .right {
-    height: 400px;
-  }
+
   .left-img img {
     height: 400px;
   }
