@@ -598,6 +598,10 @@ footer span a:hover {
   margin-bottom: 10px;
 }
 
+.artist-page .card .content .socials{
+  margin: 20px 0;
+}
+
 
 .card .popup {
   display: none;
@@ -928,6 +932,16 @@ footer span a:hover {
   .artist-page .card .imgBx{
     width: 154px;
   }
+
+  .artist-page .card:hover{
+    height: 325px;
+  }
+
+  .artist-page .card .content h3{
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 489px){
@@ -948,3 +962,5 @@ footer span a:hover {
     height: 500px;
   }
 }
+
+
