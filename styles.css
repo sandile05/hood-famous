@@ -122,9 +122,10 @@ a {
   display: flex;
 }
 .nav-menu2 li{
-  padding-right: 10px;
-  color:rgb(219, 215, 215)
+  padding: 0 5px;
+  color:rgb(219, 215, 215);
 }
+
 
 .nav-menu2 li:hover{
   color: dodgerblue;
@@ -138,32 +139,53 @@ main {
   width: 90%;
   height: 100%;
   margin: 70px auto 0;
-  /* background-color: #393838; */
-  /* padding-top: 70px; */
 }
 
-button {
-  padding: 15px 60px;
-  background-color: rgb(149, 170, 197);
-  color: rgb(53, 49, 49);
-  border: none;
-  outline: none;
-  font-size: 20px;
-  cursor: pointer;
+button{
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover,
+button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+button:active {
+  background: var(--color);
+  color: #fff;
 }
 
 .home,
 .featured,
 .blog {
   width: 100%;
-  /* background-color: #f2f2f2; */
   margin-bottom: 70px;
 }
 .wrapper,
 .featured-wrapper {
   width: 100%;
   height: 75%;
-  /* background-color: rgb(44, 39, 33); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,7 +198,6 @@ button {
   width: 48%;
   height: 500px;
   margin-top: 30px;
-  /* background-color: #4070f4; */
 }
 
 .about-container .right-side {
@@ -192,7 +213,6 @@ h2 {
 .hero-logo{
   width: 100%;
   height: 300px;
-  /* background-color: #4caf50; */
   margin: 0 auto;
 }
 .hero-logo img{
@@ -200,10 +220,8 @@ h2 {
   height: 100%;
 }
 .left p {
-  /* margin-top: -30px; */
   text-align: center;
   margin-bottom: 2rem;
-  /* padding-bottom: 30px; */
 }
 
 .socials {
@@ -259,7 +277,6 @@ h2 {
 .main-artists {
   width: 100%;
   height: 500px;
-  /* background-color: aquamarine; */
 }
 
 .featured-wrapper {
@@ -393,14 +410,10 @@ button {
 /* contact us styling  */
 .contact {
   width: 100%;
-  /* background-color: #242526; */
-
   margin-bottom: 50px;
 }
 .contact-container {
   width: 100%;
-  /* height: 85vh; */
-  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -482,26 +495,21 @@ footer span a:hover {
 
 /* ----------------------------------------  */
 
-/* artist page cards  */
+/* artist page */
 .artist-page {
   width: 100%;
   height: 100%;
 }
-.categories {
-  display: flex;
-  justify-content: center;
-  margin: 100px;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 
-.category {
-  padding: 10px;
-  cursor: pointer;
-  border: 1px solid black;
-  margin: 0 auto;
+.selected-category{
+
+  height: 45px;
+  background-color: #2b2b2b;
+  padding: 10px 15px;
+  position: fixed;
+  top: 70px;
+  right: 10px;;
+  z-index: 1
 }
 
 /* card styles  */
@@ -509,11 +517,13 @@ footer span a:hover {
 .cards{
   display: flex;
   flex-wrap: wrap;
-  position: relative;
+  justify-content: center;
+  /* position: relative; */
+
 
 }
 #profileCards {
-  margin-top: 150px;
+  margin: 130px auto;
 }
 
 .artist-page .card{
@@ -521,24 +531,24 @@ footer span a:hover {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 350px;
+  width: 270px;
   height: 300px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
-  transition: 0.5s;
-  margin: 20px;
+  transition: 0.25s;
+  margin: 15px;
 }
 
 .artist-page .card:hover{
-  height: 400px;
+  height: 320px;
 }
 
 .artist-page .card .imgBx{
   top: 20px;
-  left: 24px;
+  left: 15px;
   position: absolute;
-  width: 300px;
+  width: 240px;
   height: 220px;
   background: #333;
   border-radius: 12px;
@@ -548,7 +558,7 @@ footer span a:hover {
 }
 
 .artist-page .card:hover .imgBx{
-  top: -100px;
+  top: -80px;
   scale: 0.75;
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 }
@@ -568,7 +578,7 @@ footer span a:hover {
   width: 100%;
   padding: 0 30px;
   text-align: center;
-  height: 30px;
+  height: 33px;
   overflow: hidden;
   transition: 0.5s;
 }
@@ -581,7 +591,13 @@ footer span a:hover {
 .artist-page .card .content h3{
   font-size: 1.5em;
   font-weight: 700;
+  margin-bottom: 10px;
 }
+
+.artist-page .card .content p{
+  margin-bottom: 10px;
+}
+
 
 .card .popup {
   display: none;
@@ -595,6 +611,7 @@ footer span a:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
   z-index: 1;
+  transition: 0.5s;
 }
 
 .card .popup .popup-image{
@@ -627,9 +644,51 @@ footer span a:hover {
     width: 1024px;
   }
 }
+@media(max-width: 1015px){
+  .artist-page .card{
+    width: 250px;
+  }
+  .artist-page .card .imgBx{
+    width: 220px;
+  }
+}
 @media (max-width: 986px) {
   .about-container .right-side {
     width: 100%;
+  }
+}
+
+@media (max-width: 948px){
+  .artist-page .card{
+    width: 240px;
+  }
+  .artist-page .card .imgBx{
+    width: 210px;
+  }
+}
+@media (max-width: 915px){
+  .artist-page .card{
+    width: 230px;
+  }
+  .artist-page .card .imgBx{
+    width: 200px;
+  }
+}
+@media (max-width: 881px){
+  .artist-page .card{
+    width: 210px;
+  }
+  .artist-page .card .imgBx{
+    width: 183px;
+  }
+}
+
+@media (max-width: 815px){
+  .artist-page .card{
+    width: 200px;
+  }
+  .artist-page .card .imgBx{
+    width: 173px;
   }
 }
 
@@ -639,7 +698,6 @@ footer span a:hover {
     width: 100%;
     height: 530px;
     margin-top: 30px;
-    /* background-color: #4070f4; */
   }
 
   .swiper {
@@ -666,6 +724,22 @@ footer span a:hover {
   .hero-logo{
     margin-bottom: 20px;
 }
+
+.artist-page .card{
+  width: 280px;
+}
+.artist-page .card .imgBx{
+  width: 250px;
+}
+}
+
+@media (max-width: 703px){
+  .artist-page .card{
+    width: 270px;
+  }
+  .artist-page .card .imgBx{
+    width: 240px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -709,16 +783,98 @@ footer span a:hover {
     width: 100%;
     height: 500px;
     margin-top: 10px;
-    /* background-color: #4070f4; */
   }
 }
 
-@media (max-width: 667px) {
+@media (max-width: 687px) {
   h1,
   h2 {
     font-size: 1.8rem;
   }
 
+  .artist-page .card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 260px;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.25s;
+    margin: 15px;
+  }
+  .artist-page .card .imgBx{
+    top: 20px;
+    left: 24px;
+    position: absolute;
+    width: 210px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 0 auto;
+  }
+
+  .artist-page .card:hover .imgBx{
+    top: -80px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  }
+
+  .artist-page .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .artist-page .card .content{
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    text-align: center;
+    height: 30px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .card .popup{
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 659px){
+  .artist-page .card{
+    width: 250px;
+  }
+  .artist-page .card .imgBx{
+    width: 203px;
+  }
+}
+
+@media (max-width: 637px){
+  .artist-page .card{
+    width: 240px;
+  }
+  .artist-page .card .imgBx{
+    width: 195px;
+  }
+}
+
+@media (max-width: 615px){
+  .artist-page .card{
+    width: 225px;
+  }
+  .artist-page .card .imgBx{
+    width: 180px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -734,6 +890,52 @@ footer span a:hover {
   }
   .about p {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 581px){
+  .artist-page .card{
+    width: 220px;
+    height: 290px;
+    margin: 10px;
+  }
+  .artist-page .card .imgBx{
+    width: 176px;
+  }
+
+  .artist-page .card:hover{
+    height: 300px;
+  }
+}
+
+@media (max-width: 555px){
+  .artist-page .card{
+    width: 210px;
+  }
+  .artist-page .card .imgBx{
+    width: 165px;
+  }
+
+  .card .popup .popup-content{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 533px){
+  .artist-page .card{
+    width: 200px;
+  }
+  .artist-page .card .imgBx{
+    width: 154px;
+  }
+}
+
+@media (max-width: 489px){
+  .artist-page .card{
+    width: 270px;
+  }
+  .artist-page .card .imgBx{
+    width: 225px;
   }
 }
 

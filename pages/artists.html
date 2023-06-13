@@ -22,42 +22,41 @@
           <li class="nav-item" onclick="showProfileCards('all')">
             All
           </li>
-          <li class="nav-item" onclick="showProfileCards('art')">
-            Art
+          <li class="nav-item" onclick="showProfileCards('Creatives')">
+            Creatives</b>
           </li>
-          <li class="nav-item"  onclick="showProfileCards('music')">
-          Music</li>
-          <li class="nav-item" onclick="showProfileCards('content')">
-          Content</li>
-          <li class="nav-item" onclick="showProfileCards('performance')">
-          Perfomance</li>
+          <li class="nav-item" onclick="showProfileCards('Public-Figures')">
+          Public Figures</li>
+          <li class="nav-item"  onclick="showProfileCards('Music')">
+            Music</li>
+          <li class="nav-item" onclick="showProfileCards('Performers')">
+          Perfomers</li>
           </ul>
       </header>
 
       <main>
         <section class="artist-page">
-
+          <div class="selected-category">
+            <div id="categoryLabel" style="text-align: center;">All</div>
+          </div>
           <div class="cards" id="profileCards">
-            <div id="categoryLabel" style="text-align: center;">Any</div>
-            <div class="card music">
+            <div class="card Music">
               <div class="imgBx">
                 <img src="../images/artist-images/profile.jpg" alt="">
               </div>
               <div class="content">
-                <h3>Artist Name - music</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, velit.</p>
-                <button class="info-button">read more</button>
+                <h3>Artist Name</h3>
+                <p>Music</p>
+
+                <button class="info-button">More Info</button>
                 <div class="popup">
-                  <div class="popup-image">
-                    <img src="../images/hf-logo.png" alt="Profile Picture">
-                  </div>
                   <div class="popup-content">
                     <div class="left-content">
                       <h3>Joseph</h3>
                     <p>Age: 30</p>
                     <p>Location: Johannesburg</p>
                     <p>Phone No.: 011 234 5678</p>
-                    <p>Email: enail@example.com</p>
+                    <p>Email: email@example.com</p>
                     <div class="socilas">
                       <a href="#"><i class='bx bxl-instagram'></i></a>
                   <a href="#"><i class='bx bxl-twitter'></i></a>
@@ -83,9 +82,9 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, velit.</p>
                 <button class="info-button">read more</button>
                 <div class="popup">
-                  <div class="popup-image">
+                  <!-- <div class="popup-image">
                     <img src="../images/hf-logo.png" alt="Profile Picture">
-                  </div>
+                  </div> -->
                   <div class="popup-content">
                     <div class="left-content">
                       <h3>Joseph</h3>
